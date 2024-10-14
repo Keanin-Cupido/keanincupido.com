@@ -27,35 +27,35 @@ const Header: React.FC = () => {
 					<ul className="flex space-x-6 tracking-wider">
 						<li>
 							<a
-								href="#about"
+								href="/about"
 								className="hover:opacity-70 text-white">
 								About
 							</a>
 						</li>
 						<li>
 							<a
-								href="#skills"
+								href="/skills"
 								className="hover:opacity-70 text-white">
 								Skills
 							</a>
 						</li>
 						<li>
 							<a
-								href="#projects"
+								href="/projects"
 								className="hover:opacity-70 text-white">
 								Projects
 							</a>
 						</li>
 						<li>
 							<a
-								href="#blog"
+								href="/blog"
 								className="hover:opacity-70 text-white">
 								Blog
 							</a>
 						</li>
 						<li>
 							<a
-								href="#contact"
+								href="/contact"
 								className="hover:opacity-70 text-white">
 								Contact
 							</a>

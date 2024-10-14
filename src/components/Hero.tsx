@@ -4,7 +4,13 @@ import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
 	return (
-		<section className="min-h-[calc(100vh-9rem)] flex flex-col items-center justify-center h-full mx-4 mt-2 mb-4 py-20 bg-gradient-to-b from-blue-600/50 to-blue-900/5 rounded-2xl">
+		<section className="min-h-[calc(100vh-9rem)] relative flex flex-col items-center justify-center h-full mx-4 mt-2 mb-4 py-20 bg-gradient-to-b from-blue-600/50 to-blue-900/5 rounded-2xl">
+			<img
+				src="/sw_haikei.svg"
+				alt="hero shapes"
+				className="-z-10 absolute top-0 left-0 w-full h-full object-cover opacity-25 rounded-2xl"
+			/>
+
 			<div className="h-full flex flex-col items-center justify-center mx-auto px-4 text-center">
 				<img
 					src="/keanincupido.svg"
