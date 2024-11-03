@@ -4,13 +4,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 // pages imports
-import Root from './layouts/Root.jsx';
+import Root from './layouts/root.jsx';
 import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
 import Portfolio from './pages/portfolio.jsx';
 import ProjectInfo from './pages/projectInfo';
-import Blog from './pages/blog.jsx';
-import BlogPost from './pages/blogPost.jsx';
+// import Blog from './pages/blog.jsx';
+// import BlogPost from './pages/blogPost.jsx';
 import Contact from './pages/contact.jsx';
 import Error from './pages/error.jsx';
 
