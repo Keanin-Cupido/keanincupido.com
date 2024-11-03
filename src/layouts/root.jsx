@@ -11,7 +11,7 @@ export default function Root() {
 			<a id="top"></a>
 
 			{/* Background Filters */}
-			<svg
+			{/* <svg
 				className="w-full pointer-events-none fixed top-0 isolate z-50 opacity-70 mix-blend-soft-light"
 				width="100%"
 				height="100%"
@@ -24,7 +24,7 @@ export default function Root() {
 						stitchTiles="stitch"></feTurbulence>
 				</filter>
 				<rect width="100%" height="100%" filter="url(#noise)"></rect>
-			</svg>
+			</svg> */}
 			<svg
 				className="w-full pointer-events-none left-0 bottom-0 fixed opacity-50 inset-0 z-40"
 				width="100%"

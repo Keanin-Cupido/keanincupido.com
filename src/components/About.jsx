@@ -27,13 +27,13 @@ const AboutSection = ({ title, content, isReversed }) => (
 			isReversed ? '-reverse' : ''
 		} md:items-start justify-between gap-4 pt-24`}>
 		<h3
-			className={`w-1/2 text-[clamp(32px,4vw,64px)] font-bold text-center md:text-${
+			className={`w-3/4 text-[clamp(32px,4vw,64px)] font-bold text-center md:text-${
 				isReversed ? 'right' : 'left'
 			}`}>
 			{title}
 		</h3>
 		<div
-			className={`w-1/2 text-[clamp(16px,1.15vw,24px)] font-medium text-center md:text-${
+			className={`w-3/4 text-[clamp(16px,1.15vw,24px)] font-medium text-center md:text-${
 				isReversed ? 'right' : 'left'
 			} space-y-6`}>
 			{content}

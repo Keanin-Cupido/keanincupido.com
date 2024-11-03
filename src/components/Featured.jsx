@@ -32,7 +32,7 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 				)}
 			</div>
 
-			<div className="flex flex-col items-center gap-2 mt-6 
+			<div className="flex flex-col items-center text-center gap-2 mt-6 
                     md:opacity-0 md:transform md:translate-y-2
                     transition-all duration-300 
                     group-hover:opacity-100 group-hover:translate-y-0">
@@ -87,7 +87,7 @@ export default function Featured() {
 					More
 				</h2>
 
-				<div className="grid grid-cols-2 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					{otherProjects.map((project) => (
 						<ProjectCard
 							key={project.title}
