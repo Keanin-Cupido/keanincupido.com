@@ -1,0 +1,23 @@
+.reactMarkDown {
+	font-size: clamp(22px, 2vw, 26px);
+}
+
+.reactMarkDown ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	list-style: disc outside none;
+	font-size: clamp(16px, 2vw, 20px);
+}
+
+.reactMarkDown ul li {
+	margin-left: 2em;
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+.reactMarkDown p {
+	font-size: clamp(16px, 2vw, 20px);
+	font-weight: 400;
+	white-space: pre-wrap;
+}
+
+/* // your other styles but all under .reactMarkDown blocks */

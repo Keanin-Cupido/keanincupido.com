@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 220 13% 10%;
+		--foreground: 220 13% 90%;
+		--muted: 220 13% 18%;
+		--muted-foreground: 220 13% 70%;
+		--accent: 217 33% 25%;
+		--accent-foreground: 220 13% 95%;
+		--popover: 220 13% 11%;
+		--popover-foreground: 220 13% 85%;
+		--border: 220 13% 20%;
+		--input: 220 13% 20%;
+		--card: 220 13% 15%;
+		--card-foreground: 220 13% 90%;
+		--primary: 217 91% 60%;
+		--primary-foreground: 220 13% 95%;
+		--secondary: 220 13% 18%;
+		--secondary-foreground: 220 13% 90%;
+		--destructive: 0 62% 30%;
+		--destructive-foreground: 220 13% 95%;
+		--ring: 217 33% 25%;
+		--radius: 0.5rem;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+		box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+	}
+	body {
+		@apply bg-background text-foreground;
+		font-feature-settings: 'rlig' 1, 'calt' 1;
+		font-family: 'DM Sans', sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+		line-height: 1.5;
+		font-weight: 400;
+		font-synthesis: none;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+	@apply text-center; /* Center text for better alignment */
+}
+
+/* Custom Classes */
+.space-mono-n {
+	font-family: 'Space Mono', monospace;
+	font-weight: 400;
+	font-style: normal;
+}
+.space-mono-b {
+	font-family: 'Space Mono', monospace;
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Accessibility Enhancements */
+:root {
+	--focus-ring: 0 0 0 3px var(--ring); /* Custom focus ring for accessibility */
+}
+
+*:focus {
+	outline: none; /* Remove default outline */
+	box-shadow: var(--focus-ring); /* Apply custom focus ring */
+}
+
+/* Custom */
+.skill.skill-primary {
+	--size: 96px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	flex-shrink: 0;
+	height: var(--size);
+	width: var(--size);
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	box-shadow: inset 0 0 10px 0 hsla(0, 0%, 100%, 0.06);
+	background-color: hsla(0, 0%, 100%, 0.05);
+	background: radial-gradient(
+		84.3% 117% at 47.3% 3.3%,
+		hsla(0, 0%, 100%, 0.18) 0,
+		hsla(0, 0%, 100%, 0.01) 100%
+	);
+	opacity: 1;
+	transform: translateX(0);
+	transition: transform 0.6s ease, opacity 0.48s ease;
+	transition-delay: calc(0.3s + var(--delay, 0) * 0.25s);
+}
+.skill svg {
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+}
+.skill:after {
+	@apply content-[""] absolute z-[2] opacity-50 inset-0;
+	background: linear-gradient(240deg, transparent, #383838);
+	border-radius: 100%;
+}
+
+.skill-set_pulseRing__t_FmF {
+	position: absolute;
+	z-index: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.skill-set_pulseRing__t_FmF span {
+	--size: 100px;
+	--delay: 0.4s;
+	--opacity: 0.4;
+	position: absolute;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 100%;
+	box-shadow: inset 0 0 30px 0 hsla(0, 0%, 100%, 0.25);
+	animation: skill-set_pulse__TNHG8 2s infinite reverse;
+	transform: scale(0.9);
+	opacity: 1;
+	animation-duration: 3.4s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+	animation-name: skill-set_pulse__TNHG8;
+	animation-timeline: auto;
+	animation-range: normal;
+	animation-delay: calc(0.5s + var(--delay, 0s));
+
+	background-color: rgba(0, 102, 255, 0.05);
+}
+
+.skill-set_pulseRing__t_FmF span:nth-child(2) {
+	--size: 150px;
+	--delay: 0.8s;
+	--opacity: 0.3;
+}
+
+.skill-set_pulseRing__t_FmF span:nth-child(3) {
+	--size: 200px;
+	--delay: 1.2s;
+	--opacity: 0.2;
+}
+
+@keyframes skill-set_pulse__TNHG8 {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+
+	40%,
+	50% {
+		opacity: var(--opacity);
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.no-visible-scrollbar {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	-webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+	display: none;
+}
