@@ -21,21 +21,18 @@ const ScribbleLine = () => {
 	);
 };
 
-const AboutSection = ({ title, content, isReversed }) => (
-	<article
-		className={`w-full mx-auto flex flex-col items-center md:flex-row${
-			isReversed ? '-reverse' : ''
-		} md:items-start justify-between gap-4 pt-24`}>
+const AboutSection = ({ title, content }) => (
+	<article className="w-full mx-auto flex flex-col items-center md:flex-row md:items-start justify-between gap-4 pt-24">
 		<h3
-			className={`w-3/4 text-[clamp(32px,4vw,64px)] font-bold text-center md:text-${
-				isReversed ? 'right' : 'left'
-			}`}>
+			className={
+				'w-3/4 text-[clamp(32px,4vw,56px)] font-bold text-center md:text-left'
+			}>
 			{title}
 		</h3>
 		<div
-			className={`w-3/4 text-[clamp(16px,1.15vw,24px)] font-medium text-center md:text-${
-				isReversed ? 'right' : 'left'
-			} space-y-6`}>
+			className={
+				'w-3/4 text-[clamp(18px,1.15vw,24px)] font-medium text-center md:text-left'
+			}>
 			{content}
 		</div>
 	</article>

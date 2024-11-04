@@ -61,7 +61,7 @@ export const personalInfo = {
 	location: 'Cape Town, South Africa',
 	bio: 'Frontend developer creating sleek UIs with React, Astro, and Next.js. Passionate about using modern web tech to build efficient, scalable apps solving real problems.',
 	social: {
-		github: 'https://github.com/keanincupido',
+		github: 'https://github.com/Keanin-Cupido',
 		linkedin: 'https://linkedin.com/in/keanincupido',
 		twitter: 'https://twitter.com/keanincupido',
 	},

@@ -9,22 +9,7 @@ export default function Root() {
 	return (
 		<React.Fragment>
 			<a id="top"></a>
-
-			{/* Background Filters */}
-			{/* <svg
-				className="w-full pointer-events-none fixed top-0 isolate z-50 opacity-70 mix-blend-soft-light"
-				width="100%"
-				height="100%"
-				aria-hidden="true">
-				<filter id="noise" className="w-full h-full">
-					<feTurbulence
-						type="fractalNoise"
-						baseFrequency="0.80"
-						numOctaves="4"
-						stitchTiles="stitch"></feTurbulence>
-				</filter>
-				<rect width="100%" height="100%" filter="url(#noise)"></rect>
-			</svg> */}
+			
 			<svg
 				className="w-full pointer-events-none left-0 bottom-0 fixed opacity-50 inset-0 z-40"
 				width="100%"

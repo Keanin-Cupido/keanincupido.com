@@ -29,26 +29,24 @@ export default function About() {
 				pageSubText={'A little more about me.'}
 			/>
 
-			<section className="flex flex-col items-center md:items-start justify-center md:justify-start gap-8 my-16 px-4">
+			<section className="flex flex-col items-center md:items-start justify-center md:justify-start gap-8 mt-16 mb-8 px-4">
 				<div className="flex flex-col gap-4">
-					<p className="text-[clamp(18px,2vw,24px)] w-full max-w-[70%] mt-16">
+					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] mt-16">
 					As a forward-thinking frontend developer, I specialize in crafting exceptional web experiences using modern JavaScript frameworks and tools. My expertise spans React, Next.js, Astro.js, and Svelte, allowing me to choose the perfect technology stack for each project's unique requirements. With a strong foundation in responsive design principles and a mastery of Tailwind CSS, I transform complex design requirements into clean, maintainable code that delivers seamless user experiences across all devices.
 					</p>
 					{/* image */}
 					<Suspense>
 						<AboutImageComponent />
 					</Suspense>
-					<p className="text-[clamp(18px,2vw,24px)] w-full max-w-[70%] self-end text-right mt-8">
+					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] self-end text-right mt-8">
 					Driven by a deep curiosity for emerging web technologies, I consistently explore and implement cutting-edge development practices to optimize performance, accessibility, and user engagement. My computer science background enables me to approach frontend challenges with a systematic mindset, whether I'm architecting component systems, optimizing build processes, or implementing state management solutions. I'm particularly passionate about creating blazing-fast web applications that prioritize core web vitals and progressive enhancement, ensuring that every user receives the best possible experience regardless of their device or network conditions.
 					</p>
-					<p className="text-[clamp(18px,2vw,24px)] w-full max-w-[70%] mt-8">
+					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] mt-8">
 					Beyond technical skills, I bring strong collaboration and communication abilities to every project. I thrive in agile environments where I can work closely with designers, product managers, and fellow developers to deliver innovative solutions. My commitment to continuous learning keeps me at the forefront of frontend development trends, including server-side rendering, static site generation, and modern build tools. I regularly attend tech conferences, contribute to open-source projects, and share my knowledge through technical blog posts.
 					</p>
-					<p className="text-[clamp(18px,2vw,24px)] w-full max-w-[70%] mt-8">
+					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] mt-8">
 					Looking ahead, I'm excited to join a forward-thinking team where I can leverage my expertise in frontend development while continuing to grow professionally. I'm particularly interested in opportunities that challenge me to push the boundaries of web development and create impactful user experiences that make a difference.
 					</p>
-
-
 				</div>
 
 				<Skills />
@@ -121,10 +119,10 @@ export default function About() {
 						just to say hello! Currently seeking new opportunities.
 					</p>
 					<div className="flex flex-col gap-2 mx-auto md:mx-0 text-center md:text-left">
-						<p className="w-fit hover:underline underline-offset-4 hover:cursor-pointer text-[clamp(18px,2vw,24px)] opacity-80">
+						<p className="w-fit hover:underline underline-offset-4 hover:cursor-pointer text-[clamp(18px,1.15vw,24px)] opacity-80">
 							keanin16@gmail.com
 						</p>
-						<p className="w-fit hover:underline underline-offset-4 hover:cursor-pointer text-[clamp(18px,2vw,24px)] opacity-80">
+						<p className="w-fit hover:underline underline-offset-4 hover:cursor-pointer text-[clamp(18px,1.15vw,24px)] opacity-80">
 							LinkedIn
 						</p>
 					</div>
