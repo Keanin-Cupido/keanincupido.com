@@ -17,37 +17,42 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 	return (
 		<Link
 			to={link}
-			className="group flex flex-col items-center gap-4 transition-all"
-			aria-label={`View ${title} project details`}>
-			<div className="relative w-full h-[75vh] aspect-video">
-				{isLoading ? (
-					<LoadingSpinner className="absolute inset-0 m-auto" />
-				) : (
-					<img
-						src={src}
-						alt={`${title} - ${subtitle}`}
-						className="w-full h-full max-w-[clamp(300px,100%,1000px)] mx-auto object-cover rounded-lg shadow-xl transition 
-                     duration-300 group-hover:scale-[1.02] group-hover:shadow-2xl"
-					/>
-				)}
-			</div>
+			className="group relative w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh] overflow-hidden rounded-lg"
+			aria-label={`View ${title} project details`}
+		>
+			{/* Image Container */}
+			{isLoading ? (
+				<LoadingSpinner className="absolute inset-0 m-auto" />
+			) : (
+				<img
+					src={src}
+					alt={`${title} - ${subtitle}`}
+					className="w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh] object-cover transition duration-500 
+						group-hover:scale-95 rounded-lg"
+				/>
+			)}
 
-			<div className="flex flex-col items-center text-center gap-2 mt-6 
-                    md:opacity-0 md:transform md:translate-y-2
-                    transition-all duration-300 
-                    group-hover:opacity-100 group-hover:translate-y-0">
-				<h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
-				<h3 className="text-xl md:text-2xl text-muted-foreground">{subtitle}</h3>
+			{/* Overlay - Hidden by default, shown on hover */}
+			<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50 
+				opacity-100 md:opacity-0 group-hover:opacity-100 group-hover:scale-95 transition-all duration-500 rounded-lg
+				flex flex-col justify-end p-8 text-white w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh]">
 				
-				<Separator className="w-4/5 my-4" />
-				
-				<ul className="flex flex-wrap justify-center gap-4 text-lg">
-					{tech.map((item, index) => (
-						<li key={index} className="text-muted-foreground">
-							{item}
-						</li>
-					))}
-				</ul>
+				<div className="transform translate-y-4 group-hover:translate-y-0 
+					transition-transform duration-300 space-y-4">
+					<h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
+					<p className="text-xl md:text-2xl text-gray-200">{subtitle}</p>
+					
+					<Separator className="w-4/5 my-4 bg-white/20" />
+					
+					<ul className="flex flex-wrap gap-4">
+						{tech.map((item, index) => (
+							<li key={index} 
+								className="px-4 py-2 rounded-full bg-white/10 text-gray-100">
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</Link>
 	);

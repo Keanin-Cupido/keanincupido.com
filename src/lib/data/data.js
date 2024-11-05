@@ -63,6 +63,6 @@ export const personalInfo = {
 	social: {
 		github: 'https://github.com/Keanin-Cupido',
 		linkedin: 'https://linkedin.com/in/keanincupido',
-		twitter: 'https://twitter.com/keanincupido',
+		twitter: 'https://x.com/kc__cupido',
 	},
 };

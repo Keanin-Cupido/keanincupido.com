@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useState } from 'react-dom';
 
 // icons
 import { Github, Linkedin, Twitter, Menu } from 'lucide-react';
@@ -17,9 +18,12 @@ import { Separator } from '@/components/ui/separator';
 import { personalInfo } from '../lib/data/data';
 
 export default function Header() {
+	// Add state for menu
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<header
-			className="bg-white bg-opacity-5 mx-4 mb-4 mt-8 backdrop-blur-md border border-white/10 rounded-xl p-2"
+			className="bg-white/5 mx-4 mb-4 mt-8 backdrop-blur-md border border-white/10 rounded-xl p-2"
 			role="banner"
 			id="nav">
 			<div className="container mx-auto px-8 flex justify-between items-center space-x-2">
@@ -99,72 +103,57 @@ export default function Header() {
 
 				{/* Mobile Menu */}
 				<div className="md:hidden" aria-label="Mobile menu">
-					<DropdownMenu>
+					<DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
 						<DropdownMenuTrigger asChild>
 							<Button
 								variant="ghost"
 								size="icon"
+								className="transition-transform duration-200 ease-in-out"
 								aria-label="Open menu">
-								<Menu className="h-5 w-5 text-white" />
+								<Menu className={`h-5 w-5 text-white transform transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`} />
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent
 							align="end"
-							className="p-2 flex flex-col gap-2 bg-blue-500 bg-opacity-90 border border-white/15">
-							{[
-								'/',
-								'/about',
-								'/portfolio',
-								// '/blog',
-								'/contact',
-							].map((path, index) => (
-								<DropdownMenuItem key={index}>
+							className="w-56 p-2 flex flex-col gap-2 bg-blue-500/90 border border-white/15 backdrop-blur-md"
+							sideOffset={8}
+							style={{ 
+								transformOrigin: 'top right',
+								animation: 'dropIn 0.2s ease-out'
+							}}>
+							{['/', '/about', '/portfolio', '/contact'].map((path) => (
+								<DropdownMenuItem 
+									key={path}
+									className="focus:bg-white/10 rounded-md transition-colors duration-200"
+									onSelect={() => setIsOpen(false)}>
+									<NavLink
+										to={path}
+										className="w-full text-white hover:opacity-90 transition-opacity duration-200"
+										aria-label={`Navigate to ${path === '/' ? 'Home' : path.slice(1)}`}>
+										{path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+									</NavLink>
+								</DropdownMenuItem>
+							))}
+							
+							<Separator className="bg-white/20 my-2" />
+							
+							{Object.entries(personalInfo.social).map(([key, value]) => (
+								<DropdownMenuItem 
+									key={key}
+									className="focus:bg-white/10 rounded-md transition-colors duration-200">
 									<a
-										href={path}
-										className="text-white"
-										aria-label={`Navigate to ${
-											path === '/'
-												? 'Home'
-												: path.slice(1)
-										}`}>
-										{path === '/'
-											? 'Home'
-											: path
-													.slice(1)
-													.charAt(0)
-													.toUpperCase() +
-											  path.slice(2)}
+										href={value}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="w-full flex items-center text-white hover:opacity-90 transition-opacity duration-200"
+										aria-label={`Visit my ${key.charAt(0).toUpperCase() + key.slice(1)} profile`}>
+										{key === 'github' && <Github className="h-5 w-5 mr-2" />}
+										{key === 'linkedin' && <Linkedin className="h-5 w-5 mr-2" />}
+										{key === 'twitter' && <Twitter className="h-5 w-5 mr-2" />}
+										{key.charAt(0).toUpperCase() + key.slice(1)}
 									</a>
 								</DropdownMenuItem>
 							))}
-							<Separator className="bg-white" />
-							{Object.entries(personalInfo.social).map(
-								([key, value]) => (
-									<DropdownMenuItem key={key}>
-										{key === 'github' && (
-											<Github className="h-5 w-5 text-white mr-2" />
-										)}
-										{key === 'linkedin' && (
-											<Linkedin className="h-5 w-5 text-white mr-2" />
-										)}
-										{key === 'twitter' && (
-											<Twitter className="h-5 w-5 text-white mr-2" />
-										)}
-										<a
-											href={value}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-white"
-											aria-label={`Visit my ${
-												key.charAt(0).toUpperCase() +
-												key.slice(1)
-											} profile`}>
-											{key.charAt(0).toUpperCase() +
-												key.slice(1)}
-										</a>
-									</DropdownMenuItem>
-								),
-							)}
 						</DropdownMenuContent>
 					</DropdownMenu>
 				</div>
