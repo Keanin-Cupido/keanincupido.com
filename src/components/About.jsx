@@ -25,7 +25,7 @@ const AboutSection = ({ title, content }) => (
 	<article className="w-full mx-auto flex flex-col items-center md:flex-row md:items-start justify-between gap-4 pt-24">
 		<h3
 			className={
-				'w-3/4 text-[clamp(32px,4vw,56px)] font-bold text-center md:text-left'
+				'w-3/4 text-[clamp(32px,3.5vw,48px)] font-bold text-center md:text-left'
 			}>
 			{title}
 		</h3>
@@ -71,7 +71,7 @@ export default function About() {
 						</span>
 						. The ability to transform lines of code into visually
 						stunning, interactive experiences captivated me
-						completely. I found my true calling in frontend
+						completely. <br /> <br />I found my true calling in frontend
 						development, where I could blend analytical
 						problem-solving with creative design, turning complex
 						ideas into elegant, user-friendly interfaces that make a
@@ -99,6 +99,7 @@ export default function About() {
 							sparking a deep appreciation for how technology can
 							enhance and transform human experiences.
 						</p>
+						<br />
 						<p>
 							This curiosity led me to experiment with web
 							development, teaching me valuable lessons about web

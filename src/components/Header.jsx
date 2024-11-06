@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react-dom';
+import { useState } from 'react';
 
 // icons
 import { Github, Linkedin, Twitter, Menu } from 'lucide-react';

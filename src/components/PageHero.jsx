@@ -6,7 +6,7 @@ export default function PageHero({ pageName, pageSubText }) {
 				aria-labelledby="heading-title">
 				<h1
 					id="heading-title"
-					className="text-[clamp(42px,6vw,96px)] font-medium"
+					className="text-[clamp(42px,6vw,72px)] font-medium"
 					tabIndex="0">
 					{pageName}
 				</h1>

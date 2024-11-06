@@ -9,9 +9,9 @@ export const skills = [
 
 export const projects = [
 	{
-		title: 'E-commerce Platform',
-		description: 'A full-stack e-commerce solution with React and Node.js',
-		image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+		title: 'Video Streaming Web',
+		description: 'A full-stack video streaming solution with React and Node.js',
+		image: '/projects_imgs/video-streaming-web.webpx',
 		technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
 		demoUrl: 'https://example-ecommerce.com',
 		sourceUrl: 'https://github.com/keanincupido/ecommerce-platform',

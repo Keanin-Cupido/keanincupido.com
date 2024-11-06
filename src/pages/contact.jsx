@@ -73,7 +73,7 @@ export default function Contact() {
 	};
 
 	return (
-		<main className="container mx-auto px-4 py-8">
+		<main className="container mx-auto">
 			<PageHero pageName="Contact" pageSubText="Get in touch." />
 
 			<section

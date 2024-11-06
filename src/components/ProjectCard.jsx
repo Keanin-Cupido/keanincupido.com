@@ -110,7 +110,7 @@ const ProjectCard = ({
 				<img
 					src={image}
 					alt={`Screenshot of ${title} project`}
-					className="w-full h-full object-cover object-center 
+					className="w-full h-full object-cover object-top object-left 
 						transition-transform duration-500 group-hover:scale-105"
 					loading="lazy"
 				/>

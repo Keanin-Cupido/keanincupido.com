@@ -1,7 +1,16 @@
-import { StrictMode } from 'react';
+import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+import emailjs from '@emailjs/browser';
+import LoadingScreen from './components/ui/loading.jsx';
+
+try {
+	emailjs.init("uyFRDkoERfJDz-4aj");
+	console.log('EmailJS initialized successfully');
+} catch (error) {
+	console.error('EmailJS initialization error:', error);
+}
 
 // pages imports
 import Root from './layouts/root.jsx';
@@ -23,25 +32,37 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <Home role="contentinfo" aria-label="Home Page" />,
+				element: (
+					<Suspense fallback={<LoadingScreen />}>
+						<Home role="contentinfo" aria-label="Home Page" />
+					</Suspense>
+				),
 			},
 			{
 				path: '/about',
-				element: <About role="contentinfo" aria-label="About Page" />,
+				element: (
+					<Suspense fallback={<LoadingScreen />}>
+						<About role="contentinfo" aria-label="About Page" />
+					</Suspense>
+				),
 			},
 			{
 				path: '/portfolio',
 				element: (
-					<Portfolio role="contentinfo" aria-label="Portfolio Page" />
+					<Suspense fallback={<LoadingScreen />}>
+						<Portfolio role="contentinfo" aria-label="Portfolio Page" />
+					</Suspense>
 				),
 			},
 			{
 				path: '/portfolio/:project_title',
 				element: (
-					<ProjectInfo
-						role="contentinfo"
-						aria-label="Project Info Page"
-					/>
+					<Suspense fallback={<LoadingScreen />}>
+						<ProjectInfo
+							role="contentinfo"
+							aria-label="Project Info Page"
+						/>
+					</Suspense>
 				),
 			},
 			// {
@@ -57,7 +78,9 @@ const router = createBrowserRouter([
 			{
 				path: '/contact',
 				element: (
-					<Contact role="contentinfo" aria-label="Contact Page" />
+					<Suspense fallback={<LoadingScreen />}>
+						<Contact role="contentinfo" aria-label="Contact Page" />
+					</Suspense>
 				),
 			},
 		],

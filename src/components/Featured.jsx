@@ -27,7 +27,7 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 				<img
 					src={src}
 					alt={`${title} - ${subtitle}`}
-					className="w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh] object-cover transition duration-500 
+					className="w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh] object-cover object-left md:object-top transition duration-500 
 						group-hover:scale-95 rounded-lg"
 				/>
 			)}
@@ -35,7 +35,7 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 			{/* Overlay - Hidden by default, shown on hover */}
 			<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50 
 				opacity-100 md:opacity-0 group-hover:opacity-100 group-hover:scale-95 transition-all duration-500 rounded-lg
-				flex flex-col justify-end p-8 text-white w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh]">
+				flex flex-col justify-end p-8 pb-12 text-white w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh]">
 				
 				<div className="transform translate-y-4 group-hover:translate-y-0 
 					transition-transform duration-300 space-y-4">
@@ -47,7 +47,7 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 					<ul className="flex flex-wrap gap-4">
 						{tech.map((item, index) => (
 							<li key={index} 
-								className="px-4 py-2 rounded-full bg-white/10 text-gray-100">
+								className="px-4 py-2 text-sm md:text-base rounded-full bg-white/10 text-gray-100">
 								{item}
 							</li>
 						))}

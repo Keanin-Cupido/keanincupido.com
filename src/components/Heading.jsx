@@ -18,12 +18,12 @@ export default function Heading({
 			</div>
 			<h1
 				id="heading-title"
-				className="text-[clamp(48px,6vw,180px)] font-medium"
+				className="text-[clamp(48px,5vw,124px)] font-medium"
 				tabIndex="0">
 				{headingMiddle || null}
 			</h1>
 			<p
-				className="mx-auto w-full max-w-[400px] text-[clamp(18px,1.5vw,28px)] mt-[clamp(0.75em,1em,1.5em)] opacity-80 font-light tracking-wider"
+				className="mx-auto w-full max-w-[600px] text-[clamp(18px,1.25vw,28px)] mt-[clamp(0.75em,1em,1.5em)] opacity-80 font-light tracking-wider"
 				aria-describedby="heading-description">
 				<span id="heading-description">{headingShortDesc || null}</span>
 			</p>

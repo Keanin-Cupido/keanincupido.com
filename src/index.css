@@ -24,6 +24,7 @@
 		--destructive-foreground: 220 13% 95%;
 		--ring: 217 33% 25%;
 		--radius: 0.5rem;
+		--focus-ring: 0 0 0 3px var(--ring);
 	}
 }
 
@@ -94,30 +95,26 @@ h1 {
 
 /* Custom */
 .skill.skill-primary {
-	--size: 96px;
+	--skill-size: 96px;
+	--skill-padding: 1rem;
+	--skill-bg-opacity: 0.05;
+	
+	height: var(--skill-size);
+	width: var(--skill-size);
+	padding: var(--skill-padding);
 	z-index: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
 	position: relative;
-	flex-shrink: 0;
-	height: var(--size);
-	width: var(--size);
-	padding: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 100%;
+	flex-shrink: 0;
+	border-radius: 50%;
 	box-shadow: inset 0 0 10px 0 hsla(0, 0%, 100%, 0.06);
-	background-color: hsla(0, 0%, 100%, 0.05);
 	background: radial-gradient(
 		84.3% 117% at 47.3% 3.3%,
 		hsla(0, 0%, 100%, 0.18) 0,
-		hsla(0, 0%, 100%, 0.01) 100%
+		hsla(0, 0%, 100%, var(--skill-bg-opacity)) 100%
 	);
-	opacity: 1;
-	transform: translateX(0);
 	transition: transform 0.6s ease, opacity 0.48s ease;
 	transition-delay: calc(0.3s + var(--delay, 0) * 0.25s);
 }
@@ -149,7 +146,7 @@ h1 {
 	height: var(--size);
 	border-radius: 100%;
 	box-shadow: inset 0 0 30px 0 hsla(0, 0%, 100%, 0.25);
-	animation: skill-set_pulse__TNHG8 2s infinite reverse;
+	animation: pulse 3.4s ease infinite backwards;
 	transform: scale(0.9);
 	opacity: 1;
 	animation-duration: 3.4s;
@@ -158,7 +155,7 @@ h1 {
 	animation-direction: normal;
 	animation-fill-mode: backwards;
 	animation-play-state: running;
-	animation-name: skill-set_pulse__TNHG8;
+	animation-name: pulse;
 	animation-timeline: auto;
 	animation-range: normal;
 	animation-delay: calc(0.5s + var(--delay, 0s));
@@ -178,40 +175,38 @@ h1 {
 	--opacity: 0.2;
 }
 
-@keyframes skill-set_pulse__TNHG8 {
+@keyframes pulse {
 	0% {
 		opacity: 0;
 		transform: scale(0.9);
 	}
-
-	40%,
-	50% {
+	45% {
 		opacity: var(--opacity);
 		transform: scale(1);
 	}
-
-	to {
+	100% {
 		opacity: 0;
 	}
 }
 
-.no-visible-scrollbar {
+.no-visible-scrollbar,
+html {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	-webkit-overflow-scrolling: touch;
-}
-
-.no-visible-scrollbar::-webkit-scrollbar {
-	display: none;
+	
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 @keyframes dropIn {
 	from {
 		opacity: 0;
-		transform: scale(0.95) translateY(-10px);
+		transform: translate3d(0, -10px, 0) scale(0.95);
 	}
 	to {
 		opacity: 1;
-		transform: scale(1) translateY(0);
+		transform: translate3d(0, 0, 0) scale(1);
 	}
 }
