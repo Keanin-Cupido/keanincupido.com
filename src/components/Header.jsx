@@ -23,7 +23,7 @@ export default function Header() {
 
 	return (
 		<header
-			className="bg-white/5 mx-4 mb-4 mt-8 backdrop-blur-md border border-white/10 rounded-xl p-2"
+			className="bg-white/5 mx-4 mb-4 mt-8 backdrop-blur-md border border-white/10 rounded-xl p-2 z-5000"
 			role="banner"
 			id="nav">
 			<div className="container mx-auto px-8 flex justify-between items-center space-x-2">
@@ -115,7 +115,7 @@ export default function Header() {
 						</DropdownMenuTrigger>
 						<DropdownMenuContent
 							align="end"
-							className="w-56 p-2 flex flex-col gap-2 bg-blue-500/90 border border-white/15 backdrop-blur-md"
+							className="w-48 p-2 flex flex-col gap-2 bg-blue-500/90 border border-white/15 backdrop-blur-md"
 							sideOffset={8}
 							style={{ 
 								transformOrigin: 'top right',
@@ -124,12 +124,13 @@ export default function Header() {
 							{['/', '/about', '/portfolio', '/contact'].map((path) => (
 								<DropdownMenuItem 
 									key={path}
-									className="focus:bg-white/10 rounded-md transition-colors duration-200"
-									onSelect={() => setIsOpen(false)}>
+									className="focus:bg-white/10 rounded-md transition-colors duration-200">
 									<NavLink
 										to={path}
 										className="w-full text-white hover:opacity-90 transition-opacity duration-200"
-										aria-label={`Navigate to ${path === '/' ? 'Home' : path.slice(1)}`}>
+										aria-label={`Navigate to ${path === '/' ? 'Home' : path.slice(1)}`}
+										onClick={() => setIsOpen(false)}
+									>
 										{path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
 									</NavLink>
 								</DropdownMenuItem>
