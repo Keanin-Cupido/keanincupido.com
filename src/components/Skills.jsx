@@ -7,18 +7,8 @@ const SKILLS_DATA = [
 	{
 		name: 'JavaScript',
 		icon: (
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="0.9em"
-				height="0.9em"
-				viewBox="0 0 20 20">
-				<path
-					fill="currentColor"
-					fillRule="evenodd"
-					d="M15.328 18.432c-1.745 0-2.873-.832-3.423-1.92l1.53-.886c.403.658.926 1.141 1.853 1.141.778 0 1.275-.389 1.275-.926 0-.808-1.078-1.124-1.839-1.45-1.356-.577-2.256-1.302-2.256-2.833 0-1.409 1.074-2.483 2.753-2.483 1.194 0 2.054.416 2.671 1.503l-1.463.94c-.322-.577-.671-.805-1.208-.805-.551 0-.9.349-.9.805 0 .564.349.792 1.155 1.141 1.689.724 2.967 1.293 2.967 3.155 0 1.692-1.329 2.618-3.115 2.618Z"
-				/>
-			</svg>
-		),
+<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 15q-.625 0-1.062-.437T6 13.5v-.25q0-.325.213-.537t.537-.213t.538.213t.212.537v.25H9V9.75q0-.325.213-.537T9.75 9t.538.213t.212.537v3.75q0 .625-.437 1.063T9 15zm5.5 0q-.425 0-.712-.288T12 14v-.5q0-.2.15-.35t.35-.15h.5q.2 0 .35.15t.15.35h2v-1H13q-.425 0-.712-.288T12 11.5V10q0-.425.288-.712T13 9h3q.425 0 .713.288T17 10v.5q0 .2-.15.35t-.35.15H16q-.2 0-.35-.15t-.15-.35h-2v1H16q.425 0 .713.288T17 12.5V14q0 .425-.288.713T16 15z"/></svg>
+		)
 	},
 	{
 		name: 'react',
@@ -91,6 +81,70 @@ const SKILLS_DATA = [
 					fill="currentColor"
 					d="M81.504 9.465c.973 1.207 1.469 2.836 2.457 6.09l21.656 71.136a90 90 0 0 0-25.89-8.765L65.629 30.28a1.833 1.833 0 0 0-3.52.004L48.18 77.902a90.1 90.1 0 0 0-26.003 8.778l21.758-71.14c.996-3.25 1.492-4.876 2.464-6.083a8 8 0 0 1 3.243-2.398c1.433-.575 3.136-.575 6.535-.575H71.72c3.402 0 5.105 0 6.543.579a8 8 0 0 1 3.242 2.402Zm2.59 80.61c-3.57 3.054-10.696 5.136-18.903 5.136c-10.07 0-18.515-3.137-20.754-7.356c-.8 2.418-.98 5.184-.98 6.954c0 0-.527 8.675 5.508 14.71a5.67 5.67 0 0 1 5.672-5.671c5.37 0 5.367 4.683 5.363 8.488v.336c0 5.773 3.527 10.719 8.543 12.805a11.6 11.6 0 0 1-1.172-5.098c0-5.508 3.23-7.555 6.988-9.938c2.989-1.894 6.309-4 8.594-8.222a15.5 15.5 0 0 0 1.875-7.41a15.6 15.6 0 0 0-.734-4.735Zm0 0"
 				/>
+			</svg>
+		),
+	},
+];
+const SKILLS_DATA_EXTRA = [
+	{
+		name: 'HTML',
+		icon: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 512">
+				<path fill="currentColor" d="M0 0h512v512H0z" />
+				<path fill="#E44D26" d="M0 0h512v512H0z" />
+				<path fill="#F16529" d="M0 0h512v512H0z" />
+				<path fill="#FFFFFF" d="M0 0h512v512H0z" />
+			</svg>
+		),
+	},
+	{
+		name: 'CSS',
+		icon: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 512">
+				<path fill="currentColor" d="M0 0h512v512H0z" />
+				<path fill="#1572B6" d="M0 0h512v512H0z" />
+				<path fill="#33A9DC" d="M0 0h512v512H0z" />
+				<path fill="#FFFFFF" d="M0 0h512v512H0z" />
+			</svg>
+		),
+	},
+	{
+		name: 'Node.js',
+		icon: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 512">
+				<path fill="currentColor" d="M0 0h512v512H0z" />
+				<path fill="#8CC84B" d="M0 0h512v512H0z" />
+				<path fill="#FFFFFF" d="M0 0h512v512H0z" />
+			</svg>
+		),
+	},
+	{
+		name: 'Git',
+		icon: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 512">
+				<path fill="currentColor" d="M0 0h512v512H0z" />
+				<path fill="#F05032" d="M0 0h512v512H0z" />
+				<path fill="#FFFFFF" d="M0 0h512v512H0z" />
+			</svg>
+		),
+	},
+	{
+		name: 'Webpack',
+		icon: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 512">
+				<path fill="currentColor" d="M0 0h512v512H0z" />
+				<path fill="#8CC84B" d="M0 0h512v512H0z" />
+				<path fill="#FFFFFF" d="M0 0h512v512H0z" />
+			</svg>
+		),
+	},
+	{
+		name: 'Jest',
+		icon: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 512 512">
+				<path fill="currentColor" d="M0 0h512v512H0z" />
+				<path fill="#C21325" d="M0 0h512v512H0z" />
+				<path fill="#FFFFFF" d="M0 0h512v512H0z" />
 			</svg>
 		),
 	},
@@ -194,6 +248,24 @@ export default function Skills({ buttonDisplay = false }) {
 				</span>{' '}
 				that deliver exceptional experiences across all platforms.
 			</p>
+
+			{/* Extra Skills */}
+			{window.location.pathname === '/about' ? (
+			<div
+				className="w-full max-w-[75%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-24 mt-44"
+				role="list">
+				<Suspense
+					fallback={[...Array(6)].map((_, i) => (
+						<LoadingCard key={i} />
+					))}>
+				{/* Render extra skills if on the about page */}
+				{window.location.pathname === '/about' && (
+					SKILLS_DATA_EXTRA.map((skill) => (
+						<SkillCard key={skill.name} {...skill} />
+					))
+				)}
+				</Suspense>
+			</div>) : null}
 
 			{buttonDisplay && (
 				<div className="text-center p-8 mt-12">

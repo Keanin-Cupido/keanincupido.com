@@ -64,11 +64,11 @@ export default function ProjectInfo() {
 			</section>
 
 			<section className="space-y-8">
-				<div className="relative mx-auto w-1/2 h-1/2 aspect-video">
+				<div className="relative mx-auto w-1/2 aspect-video">
 					<img
 						src={projectData.image}
 						alt={`Screenshot of ${projectData.title}`}
-						className="rounded-lg shadow-lg object-cover "
+						className="rounded-lg shadow-lg object-cover"
 						loading="lazy"
 					/>
 				</div>

@@ -11,11 +11,11 @@ function AboutImageComponent() {
 	});
 
 	return (
-		<div className="w-full h-full bg-blue-500/80 rounded-lg px-4 py-4 flex items-center justify-center">
+		<div className="w-full h-full bg-[#4c91ff] rounded-lg px-4 py-2 flex items-center justify-center">
 			<img
 				src={src}
 				alt="hero shapes"
-				className="w-full max-w-[150px] h-full"
+				className="w-full max-w-[96px] h-full"
 			/>
 		</div>
 	);
@@ -29,23 +29,17 @@ export default function About() {
 				pageSubText={'A little more about me.'}
 			/>
 
-			<section className="flex flex-col items-center md:items-start justify-center md:justify-start gap-8 mt-16 mb-8 px-4">
+			<section className="flex flex-col items-center md:items-start justify-center md:justify-start gap-12 mt-8 px-4">
 				<div className="flex flex-col gap-4">
-					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] mt-16">
-					As a forward-thinking frontend developer, I specialize in crafting exceptional web experiences using modern JavaScript frameworks and tools. My expertise spans React, Next.js, Astro.js, and Svelte, allowing me to choose the perfect technology stack for each project's unique requirements. With a strong foundation in responsive design principles and a mastery of Tailwind CSS, I transform complex design requirements into clean, maintainable code that delivers seamless user experiences across all devices.
-					</p>
 					{/* image */}
 					<Suspense>
 						<AboutImageComponent />
 					</Suspense>
-					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] self-end text-right mt-8">
-					Driven by a deep curiosity for emerging web technologies, I consistently explore and implement cutting-edge development practices to optimize performance, accessibility, and user engagement. My computer science background enables me to approach frontend challenges with a systematic mindset, whether I'm architecting component systems, optimizing build processes, or implementing state management solutions. I'm particularly passionate about creating blazing-fast web applications that prioritize core web vitals and progressive enhancement, ensuring that every user receives the best possible experience regardless of their device or network conditions.
+					<p className="text-[clamp(20px,1.35vw,24px)] w-full max-w-[100%] md:max-w-[70%] self-end text-right mt-8">
+					Driven by a deep curiosity for emerging web technologies, I consistently explore and implement cutting-edge development practices to optimize performance, accessibility, and user engagement. My computer science background enables me to approach frontend challenges with a systematic mindset, whether I'm architecting component systems, optimizing build processes, or implementing state management solutions. <br/><br/> I'm particularly passionate about creating blazing-fast web applications that prioritize core web vitals and progressive enhancement, ensuring that every user receives the best possible experience regardless of their device or network conditions.
 					</p>
-					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] mt-8">
-					Beyond technical skills, I bring strong collaboration and communication abilities to every project. I thrive in agile environments where I can work closely with designers, product managers, and fellow developers to deliver innovative solutions. My commitment to continuous learning keeps me at the forefront of frontend development trends, including server-side rendering, static site generation, and modern build tools. I regularly attend tech conferences, contribute to open-source projects, and share my knowledge through technical blog posts.
-					</p>
-					<p className="text-[clamp(18px,1.15vw,24px)] w-full max-w-[70%] mt-8">
-					Looking ahead, I'm excited to join a forward-thinking team where I can leverage my expertise in frontend development while continuing to grow professionally. I'm particularly interested in opportunities that challenge me to push the boundaries of web development and create impactful user experiences that make a difference.
+					<p className="text-[clamp(20px,1.35vw,24px)] w-full max-w-[100%] md:max-w-[70%] mt-8">
+					Beyond technical skills, I bring strong collaboration and communication abilities to every project. I thrive in agile environments where I can work closely with designers, product managers, and fellow developers to deliver innovative solutions. <br/><br/> My commitment to continuous learning keeps me at the forefront of frontend development trends, including server-side rendering, static site generation, and modern build tools. I regularly attend tech conferences, contribute to open-source projects, and share my knowledge through technical blog posts.
 					</p>
 				</div>
 
