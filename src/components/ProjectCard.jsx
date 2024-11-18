@@ -28,7 +28,7 @@ const ProjectCard = ({
 			<div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-4 z-10">
 				<Badge
 					variant="secondary"
-					className="hidden lg:flex capitalize text-sm tracking-wider rounded-full 
+					className="hidden lg:flex  text-sm tracking-wider rounded-full 
 						px-4 py-1 bg-gray-800/70 text-gray-100">
 					{techUsedIcons[0]}
 				</Badge>
@@ -59,7 +59,7 @@ const ProjectCard = ({
 						<Badge
 							key={index}
 							variant="secondary"
-							className="capitalize bg-gray-800/70 text-gray-100 px-3 py-1 
+							className=" bg-gray-800/70 text-gray-100 px-3 py-1 
 								text-sm font-medium transition-colors hover:bg-gray-700/70">
 							{icon}
 						</Badge>

@@ -73,6 +73,8 @@ export default function Portfolio() {
 					</p>
 				)}
 			</div>
+
+			
 		</main>
 	);
 }
