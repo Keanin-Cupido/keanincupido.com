@@ -44,7 +44,7 @@ export const projects = [
 		title: 'ColorCrafter',
 		description:
 			'A tool for designers that generates color palettes based on a primary color or an uploaded image. Suggests harmonious color schemes for projects.',
-		image: '',
+		image: '/projects_imgs/colorcrafter.webp',
 		technologies: ['Next.js', 'TailwindCSS', 'Radix UI', 'Vercel'],
 		demoUrl: 'https://colorcrafter.vercel.app/',
 		sourceUrl: 'https://github.com/Keanin-Cupido/nextjs-colorcrafter',
