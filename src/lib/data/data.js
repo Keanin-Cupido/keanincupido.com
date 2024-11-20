@@ -40,6 +40,17 @@ export const projects = [
 		category: 'react',
 		projectInfo: '/portfolio/bitblox',
 	},
+		{
+		title: 'ColorCrafter',
+		description:
+			'A tool for designers that generates color palettes based on a primary color or an uploaded image. Suggests harmonious color schemes for projects.',
+		image: '',
+		technologies: ['Next.js', 'TailwindCSS', 'Radix UI', 'Vercel'],
+		demoUrl: 'https://colorcrafter.vercel.app/',
+		sourceUrl: 'https://github.com/Keanin-Cupido/nextjs-colorcrafter',
+		category: 'nextjs',
+		projectInfo: '/portfolio/colorcrafter',
+	},
 ];
 
 export const blogPosts = [
