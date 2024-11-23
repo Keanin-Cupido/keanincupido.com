@@ -51,6 +51,17 @@ export const projects = [
 		category: 'nextjs',
 		projectInfo: '/portfolio/colorcrafter',
 	},
+		{
+		title: 'MelodyFetch',
+		description:
+			'A sleek YouTube to MP3 converter built with Next.js, Tailwind CSS, and shadcn/ui for fast, responsive, and accessible audio downloads.',
+		image: '/projects_imgs/melodyfetch.webp',
+		technologies: ['Next.js', 'TailwindCSS', 'ShadCN UI', 'Vercel'],
+		demoUrl: 'https://melodyfetch.vercel.app/',
+		sourceUrl: 'https://github.com/Keanin-Cupido/nextjs-melody-fetch',
+		category: 'nextjs',
+		projectInfo: '/portfolio/melodyfetch',
+	},
 ];
 
 export const blogPosts = [
