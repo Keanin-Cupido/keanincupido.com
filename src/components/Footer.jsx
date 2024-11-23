@@ -19,7 +19,7 @@ const FooterImageComponent = memo(function FooterImageComponent() {
 			role="presentation"
 			loading="lazy"
 			decoding="async"
-			className="-z-10 absolute top-0 left-0 w-full h-full object-cover opacity-35 rounded-2xl"
+			className="-z-10 absolute top-0 left-0 w-full h-full object-cover opacity-20 rounded-2xl"
 		/>
 	);
 });
@@ -47,7 +47,7 @@ const Footer = memo(function Footer() {
 
 	return (
 		<footer
-			className="relative min-h-[calc(60vh-8.5rem)] bg-gradient-to-b from-blue-900/10 to-blue-600/5 flex flex-col items-center justify-center gap-4 mx-4 mt-28 mb-12 py-16 rounded-2xl"
+			className="relative min-h-[calc(30vh)] bg-gradient-to-b from-blue-900/10 to-blue-600/5 flex flex-col items-center justify-center gap-4 mx-4 mt-28 mb-12 py-12 rounded-2xl"
 			aria-label="Footer">
 			<LogoImage size="md" />
 			<Suspense fallback={null}>

@@ -52,7 +52,7 @@ export default function Portfolio() {
 			{/* Projects Grid */}
 			<div
 				id="projects-grid"
-				className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-4 mt-12 mb-16"
+				className="container mx-auto grid grid-cols-1 gap-6 p-4 mt-12 mb-16"
 				role="tabpanel">
 				{filteredProjects.length > 0 ? (
 					filteredProjects.map((project) => (

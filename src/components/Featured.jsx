@@ -17,7 +17,7 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 	return (
 		<Link
 			to={link}
-			className="group relative w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh] overflow-hidden rounded-lg"
+			className="group relative w-full mx-auto overflow-hidden rounded-lg"
 			aria-label={`View ${title} project details`}
 		>
 			{/* Image Container */}
@@ -27,27 +27,27 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 				<img
 					src={src}
 					alt={`${title} - ${subtitle}`}
-					className="w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh] object-cover object-left md:object-top transition duration-500 
+					className="w-3/4 mx-auto h-[35vh] object-cover object-top transition duration-500 
 						group-hover:scale-95 rounded-lg"
 				/>
 			)}
 
 			{/* Overlay - Hidden by default, shown on hover */}
 			<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50 
-				opacity-100 md:opacity-0 group-hover:opacity-100 group-hover:scale-95 transition-all duration-500 rounded-lg
-				flex flex-col justify-end p-8 pb-12 text-white w-full max-w-[95%] md:max-w-[80%] mx-auto h-[75vh]">
+				opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-lg
+				flex flex-col justify-end p-6 text-white">
 				
 				<div className="transform translate-y-4 group-hover:translate-y-0 
 					transition-transform duration-300 space-y-4">
-					<h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
-					<p className="text-xl md:text-2xl text-gray-200">{subtitle}</p>
+					<h2 className="text-3xl md:text-2xl font-bold">{title}</h2>
+					<p className="text-lg md:text-base text-gray-200">{subtitle}</p>
 					
 					<Separator className="w-4/5 my-4 bg-white/20" />
 					
-					<ul className="flex flex-wrap gap-4">
+					<ul className="flex flex-wrap gap-2">
 						{tech.map((item, index) => (
 							<li key={index} 
-								className="px-4 py-2 text-sm md:text-base rounded-full bg-white/10 text-gray-100">
+								className="px-3 py-1 text-xs md:text-sm rounded-full bg-white/10 text-gray-100">
 								{item}
 							</li>
 						))}
@@ -92,7 +92,7 @@ export default function Featured() {
 					More
 				</h2>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div className="grid grid-cols-1 gap-8">
 					{otherProjects.map((project) => (
 						<ProjectCard
 							key={project.title}

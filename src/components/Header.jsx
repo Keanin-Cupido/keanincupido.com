@@ -51,7 +51,7 @@ export default function Header() {
 									<NavLink
 										to={path}
 										className={({ isActive }) =>
-											`hover:opacity-70 ${
+											`hover:opacity-70 text-md md:text-sm ${
 												isActive
 													? 'text-white font-semibold underline underline-offset-[6px]'
 													: 'text-white/50'

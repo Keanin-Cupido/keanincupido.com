@@ -64,7 +64,7 @@ export default function Root() {
 			</svg>
 
 			{/* Main Content */}
-			<main className="relative w-full container mx-auto" role="main">
+			<main className="relative w-full max-w-[1024px] container mx-auto" role="main">
 				<Header />
 				<section
 					className="w-full mx-auto my-2 z-100"

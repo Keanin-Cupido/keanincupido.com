@@ -25,13 +25,13 @@ const AboutSection = ({ title, content }) => (
 	<article className="w-full mx-auto flex flex-col items-center md:flex-row md:items-start justify-between gap-4 pt-24">
 		<h3
 			className={
-				'w-3/4 text-[clamp(32px,3.5vw,48px)] font-bold text-center md:text-left'
+				'w-1/4 text-[clamp(24px,3vw,32px)] font-bold text-center md:text-left'
 			}>
 			{title}
 		</h3>
 		<div
 			className={
-				'w-3/4 text-[clamp(18px,1.15vw,24px)] font-medium text-center md:text-left'
+				'w-3/4 text-[clamp(18px,1.15vw,22px)] font-medium text-center md:text-left'
 			}>
 			{content}
 		</div>

@@ -32,7 +32,7 @@ const ScribbleLine = () => {
 		<img
 			src={src}
 			alt=""
-			className="absolute -bottom-[6px] w-[200px] h-[10px] invert opacity-50"
+			className="absolute -bottom-[6px] w-[200px] h-[10px] invert opacity-30"
 			aria-hidden="true"
 		/>
 	);
@@ -43,7 +43,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="relative flex min-h-[calc(100vh-8.5rem)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/50 to-blue-900/5 rounded-2xl"
+			className="relative flex min-h-[calc(60vh)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/10 to-blue-900/5 rounded-2xl"
 			aria-labelledby="hero-heading">
 			<Suspense fallback={<LoadingSpinner />}>
 				<HeroImage />
@@ -60,7 +60,7 @@ export default function Hero() {
 
 				<h1
 					id="hero-heading"
-					className="text-[clamp(32px,3vw,96px)] font-bold mb-4">
+					className="text-[clamp(32px,2.5vw,64px)] font-bold mb-4">
 					{personalInfo.name}
 				</h1>
 
@@ -71,7 +71,7 @@ export default function Hero() {
 					</Suspense>
 				</h2>
 
-				<p className="text-[clamp(16px,1.25vw,24px)] mb-8 max-w-[clamp(300px,75vw,600px)] mx-auto">
+				<p className="text-[clamp(16px,1.15vw,24px)] mb-8 max-w-[clamp(300px,75vw,600px)] mx-auto">
 					<span className="underline underline-offset-4 opacity-90">
 						Frontend developer
 					</span>{' '}

@@ -6,8 +6,15 @@ export default function LoadingScreen() {
 			initial={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			transition={{ duration: 0.5 }}
-			className="fixed inset-0 z-50 flex items-center justify-center bg-background"
+			className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background gap-8"
 		>
+			<img
+				src="/keanincupido.svg"
+				alt={`Keanin's avatar`}
+				className="w-16 h-16 mb-4 rounded-lg"
+				width="64"
+				height="64"
+			/>
 			<div className="text-2xl font-bold">
 				{["L", "o", "a", "d", "i", "n", "g", "..."].map((letter, index) => (
 					<motion.span

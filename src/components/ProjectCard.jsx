@@ -17,25 +17,25 @@ const ProjectCard = ({
 
 	return (
 		<article
-			className="group relative w-full min-h-[min(400px,70vh)] p-4 lg:p-6 
-				bg-black/10 rounded-xl flex flex-col-reverse lg:flex-row 
-				items-center gap-6 overflow-hidden border border-gray-800/30
-				transition-all duration-300 hover:border-gray-700/50
+			className="group relative w-full min-h-[min(250px,350px)] px-4 pt-8 pb-4 lg:p-6 
+				bg-black/10 rounded-xl flex flex-col lg:flex-row 
+				items-start gap-6 overflow-hidden border border-gray-800/50
+				transition-all duration-300 hover:border-gray-700/70
 				backdrop-blur-sm hover:backdrop-blur-md"
 			role="article"
 			aria-label={`Project: ${title}`}>
 			{/* Content Section */}
-			<div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-4 z-10">
+			<div className="w-full lg:w-1/2 flex flex-col items-start gap-2 z-10">
 				<Badge
 					variant="secondary"
-					className="hidden lg:flex  text-sm tracking-wider rounded-full 
+					className="hidden lg:flex text-xs tracking-wider rounded-full 
 						px-4 py-1 bg-gray-800/70 text-gray-100">
 					{techUsedIcons[0]}
 				</Badge>
 
 				<Link
 					to={link}
-					className="group/title w-full text-2xl sm:text-3xl lg:text-4xl 
+					className="group/title w-full text-2xl md:text-xl 
 						font-bold tracking-tight lg:pt-4 text-center lg:text-left 
 						text-gray-100 transition-colors"
 					aria-label={`View ${title} project details`}>
@@ -49,24 +49,24 @@ const ProjectCard = ({
 				</Link>
 
 				<p
-					className="w-full text-base sm:text-lg lg:text-xl 
+					className="w-full max-w-[60vw] mx-auto text-xs sm:text-sm lg:text-base 
 					text-gray-300 text-center lg:text-left">
 					{trimmedSubText}
 				</p>
 
-				<div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+				<div className="flex flex-wrap items-center justify-start mx-auto md:mx-0 gap-2">
 					{techUsedIcons.map((icon, index) => (
 						<Badge
 							key={index}
 							variant="secondary"
-							className=" bg-gray-800/70 text-gray-100 px-3 py-1 
-								text-sm font-medium transition-colors hover:bg-gray-700/70">
+							className="bg-gray-800/70 text-gray-100 px-3 py-1 
+								text-xs font-medium transition-colors hover:bg-gray-700/70">
 							{icon}
 						</Badge>
 					))}
 				</div>
 
-				<div className="flex items-center justify-center lg:justify-start gap-6 pt-4">
+				<div className="flex items-center justify-start gap-6 pt-4">
 					{liveLink && (
 						<a
 							href={liveLink}
@@ -103,14 +103,14 @@ const ProjectCard = ({
 			{/* Image Section */}
 			<Link
 				to={link}
-				className="w-full lg:w-1/2 aspect-video lg:aspect-square 
+				className="w-full h-full max-h-[200px] lg:w-1/2 aspect-video lg:aspect-square 
 					overflow-hidden rounded-lg transition-transform duration-500 
 					group-hover:scale-[1.02]"
 				aria-label={`View ${title} project screenshot`}>
 				<img
 					src={image}
 					alt={`Screenshot of ${title} project`}
-					className="w-full h-full object-cover object-left 
+					className="w-full object-cover object-left 
 						transition-transform duration-500 group-hover:scale-105"
 					loading="lazy"
 				/>
