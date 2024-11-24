@@ -234,7 +234,7 @@ export default function Skills({ buttonDisplay = false }) {
 				</Suspense>
 			</div>
 
-			<p className="w-full max-w-[85%] mx-auto text-center text-base md:text-xl mt-28">
+			<p className="w-full max-w-[85%] mx-auto text-center text-sm md:text-base mt-28">
 				While my toolkit spans numerous technologies,{' '}
 				<span className="underline underline-offset-4">
 					React and its powerful ecosystem
