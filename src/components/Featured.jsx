@@ -33,7 +33,7 @@ const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 			)}
 
 			{/* Overlay - Hidden by default, shown on hover */}
-			<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50 group-hover:opacity-100 transition-all duration-500 rounded-lg
+			<div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-black/30 group-hover:opacity-100 transition-all duration-500 rounded-lg
 				flex flex-col justify-end p-6 text-white">
 				
 				<div className="transform translate-y-4 group-hover:translate-y-0 
@@ -62,14 +62,13 @@ export default function Featured() {
 
 	return (
 		<section 
-			className="container mx-auto px-4 py-16 space-y-16"
+			className="container mx-auto py-16 space-y-16"
 			aria-labelledby="featured-heading"
 			id="featured"
 		>
 			<Heading
-				headingTop="Main Project"
 				headingMiddle="Featured"
-				headingShortDesc="A great portfolio allows the work to speak for itself. Here are some of the best."
+				headingShortDesc="A great portfolio allows the work to speak for itself."
 				id="featured-heading"
 			/>
 
@@ -86,7 +85,7 @@ export default function Featured() {
 			<section className="space-y-8" aria-labelledby="more-projects">
 				<h2 
 					id="more-projects"
-					className="text-4xl md:text-5xl font-medium"
+					className="text-3xl md:text-2xl text-center md:text-left font-medium"
 				>
 					More
 				</h2>
@@ -105,7 +104,7 @@ export default function Featured() {
 				</div>
 			</section>
 
-			<div className="text-center">
+			<div className="text-center md:text-left">
 				<Button 
 					asChild 
 					variant="defaultGradient" 

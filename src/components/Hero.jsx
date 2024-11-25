@@ -16,7 +16,7 @@ const HeroImage = () => {
 		<img
 			src={src}
 			alt="Decorative background shapes"
-			className="-z-10 absolute inset-0 w-full h-full object-cover opacity-25 rounded-2xl"
+			className="-z-10 absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl"
 			aria-hidden="true"
 		/>
 	);
@@ -43,7 +43,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="relative flex min-h-[calc(60vh)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/10 to-blue-900/5 rounded-2xl"
+			className="relative flex min-h-[calc(60vh)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/5 to-blue-900/0 rounded-2xl"
 			aria-labelledby="hero-heading">
 			<Suspense fallback={<LoadingSpinner />}>
 				<HeroImage />
@@ -60,20 +60,27 @@ export default function Hero() {
 
 				<h1
 					id="hero-heading"
-					className="text-[clamp(32px,2.5vw,64px)] font-bold mb-4">
+					className="text-[clamp(32px,2vw,48px)] font-bold mb-2">
 					{personalInfo.name}
 				</h1>
 
-				<h2 className="relative flex items-center justify-center text-[clamp(16px,1vw,24px)] text-muted-foreground mb-6 -mt-2">
+				{/* <h2 className="relative flex items-center justify-center text-[clamp(16px,1vw,24px)] text-muted-foreground mb-6 -mt-2">
 					<span className="relative z-10">{personalInfo.title}</span>
 					<Suspense fallback={<LoadingSpinner />}>
 						<ScribbleLine />
 					</Suspense>
-				</h2>
+				</h2> */}
 
-				<p className="text-[clamp(16px,1.15vw,24px)] mb-8 max-w-[clamp(300px,75vw,600px)] mx-auto">
+				<h3 className="relative flex items-center justify-center text-[clamp(16px,1vw,20px)] text-muted-foreground mb-6">
+					<span className="relative z-10"> <span className='w-2 h-2 bg-blue-500'></span>Cape Town, South Africa</span>
+					<Suspense fallback={<LoadingSpinner />}>
+						<ScribbleLine />
+					</Suspense>
+				</h3>
+
+				<p className="text-[clamp(16px,1.1vw,24px)] mb-8 max-w-[clamp(300px,75vw,600px)] mx-auto">
 					<span className="underline underline-offset-4 opacity-90">
-						Frontend developer
+					{personalInfo.title}
 					</span>{' '}
 					creating sleek UIs with
 					<FlipWords

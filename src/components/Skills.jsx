@@ -167,7 +167,7 @@ function ScribbleLine() {
 
 	if (isLoading) {
 		return (
-			<div className="absolute -bottom-3 w-full max-w-[350px] h-10 bg-muted/15 animate-pulse" />
+			<div className="absolute -bottom-3 md:left-0 w-full max-w-[350px] mx-auto md:mx-0 h-10 bg-muted/15 animate-pulse" />
 		);
 	}
 
@@ -176,7 +176,7 @@ function ScribbleLine() {
 			src={src}
 			alt=""
 			role="presentation"
-			className="absolute -bottom-3 w-full max-w-[350px] h-10 invert opacity-50"
+			className="absolute -bottom-3 md:left-0 w-full max-w-[200px] mx-auto md:mx-0 h-6 invert opacity-50"
 		/>
 	);
 }
@@ -184,17 +184,17 @@ function ScribbleLine() {
 function SkillCard({ name, icon }) {
 	return (
 		<div className="group flex flex-col items-center gap-4" role="listitem">
-			<div className="relative flex items-center justify-center transition-all duration-300 group-hover:scale-75">
+			<div className="relative flex items-center justify-center transition-all duration-300 group-hover:scale-85">
 				<div className="skill skill-primary z-10" aria-hidden="true">
 					{icon}
 				</div>
-				<div className="skill-set_pulseRing__t_FmF z-0">
+				{/* <div className="skill-set_pulseRing__t_FmF z-0">
 					{[1, 2, 3].map((i) => (
 						<span key={i} />
 					))}
-				</div>
+				</div> */}
 			</div>
-			<p className="text-lg md:text-xl font-semibold capitalize">
+			<p className="text-base md:text-sm font-normal capitalize">
 				{name}
 			</p>
 		</div>
@@ -222,7 +222,7 @@ export default function Skills({ buttonDisplay = false }) {
 			</div>
 
 			<div
-				className="w-full max-w-[75%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-24 mt-44"
+				className="w-full text-left flex items-start justify-start gap-8 mt-24"
 				role="list">
 				<Suspense
 					fallback={[...Array(6)].map((_, i) => (
@@ -234,25 +234,10 @@ export default function Skills({ buttonDisplay = false }) {
 				</Suspense>
 			</div>
 
-			<p className="w-full max-w-[85%] mx-auto text-center text-sm md:text-base mt-28">
-				While my toolkit spans numerous technologies,{' '}
-				<span className="underline underline-offset-4">
-					React and its powerful ecosystem
-				</span>{' '}
-				remain my go-to framework for building robust, scalable
-				solutions. This tech stack, combined with modern development
-				practices and performance optimization techniques, enables me to
-				transform complex requirements into{' '}
-				<span className="underline underline-offset-4">
-					elegant, user-centric applications
-				</span>{' '}
-				that deliver exceptional experiences across all platforms.
-			</p>
-
 			{/* Extra Skills */}
 			{window.location.pathname === '/about' ? (
 			<div
-				className="w-full max-w-[75%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-24 mt-44"
+				className="w-full max-w-[75%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mt-12"
 				role="list">
 				<Suspense
 					fallback={[...Array(6)].map((_, i) => (
@@ -267,8 +252,23 @@ export default function Skills({ buttonDisplay = false }) {
 				</Suspense>
 			</div>) : null}
 
+			<p className="w-full text-left text-sm md:text-base mt-16">
+				While my toolkit spans numerous technologies,{' '}
+				<span className="underline underline-offset-4">
+					React and its powerful ecosystem
+				</span>{' '}
+				remain my go-to framework for building robust, scalable
+				solutions. This tech stack, combined with modern development
+				practices and performance optimization techniques, enables me to
+				transform complex requirements into{' '}
+				<span className="underline underline-offset-4">
+					elegant, user-centric applications
+				</span>{' '}
+				that deliver exceptional experiences across all platforms.
+			</p>
+
 			{buttonDisplay && (
-				<div className="text-center p-8 mt-12">
+				<div className="pt-4 pb-8 mt-12 text-center md:text-left">
 					<Button asChild variant="defaultGradient" size="md">
 						<a href="/about">Read More</a>
 					</Button>

@@ -95,9 +95,9 @@ h1 {
 
 /* Custom */
 .skill.skill-primary {
-	--skill-size: 96px;
-	--skill-padding: 1rem;
-	--skill-bg-opacity: 0.05;
+	--skill-size: 48px;
+	--skill-padding: 0.5rem;
+	--skill-bg-opacity: 0.25;
 	
 	height: var(--skill-size);
 	width: var(--skill-size);
@@ -108,7 +108,7 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0;
-	border-radius: 50%;
+	border-radius: 1rem;
 	box-shadow: inset 0 0 10px 0 hsla(0, 0%, 100%, 0.06);
 	background: radial-gradient(
 		84.3% 117% at 47.3% 3.3%,
@@ -138,8 +138,8 @@ h1 {
 }
 
 .skill-set_pulseRing__t_FmF span {
-	--size: 100px;
-	--delay: 0.4s;
+	--size: 32px;
+	--delay: 0.2s;
 	--opacity: 0.4;
 	position: absolute;
 	width: var(--size);
@@ -164,13 +164,13 @@ h1 {
 }
 
 .skill-set_pulseRing__t_FmF span:nth-child(2) {
-	--size: 150px;
+	--size: 64px;
 	--delay: 0.8s;
 	--opacity: 0.3;
 }
 
 .skill-set_pulseRing__t_FmF span:nth-child(3) {
-	--size: 200px;
+	--size: 128px;
 	--delay: 1.2s;
 	--opacity: 0.2;
 }

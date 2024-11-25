@@ -14,24 +14,18 @@ const ScribbleLine = () => {
 			src={src}
 			alt=""
 			role="presentation"
-			width={350}
-			height={40}
-			className="absolute -bottom-3 w-full max-w-[350px] h-10 invert opacity-50"
+			width={300}
+			height={30}
+			className="absolute md:left-0 -bottom-3 w-full max-w-[200px] mx-auto md:mx-0 h-6 invert opacity-50"
 		/>
 	);
 };
 
-const AboutSection = ({ title, content }) => (
-	<article className="w-full mx-auto flex flex-col items-center md:flex-row md:items-start justify-between gap-4 pt-24">
-		<h3
-			className={
-				'w-1/4 text-[clamp(24px,3vw,32px)] font-bold text-center md:text-left'
-			}>
-			{title}
-		</h3>
+const AboutSection = ({ content }) => (
+	<article className="w-full mx-auto flex flex-col items-center md:flex-row md:items-start justify-between gap-4">
 		<div
 			className={
-				'w-3/4 text-[clamp(18px,1.15vw,22px)] font-medium text-center md:text-left'
+				'w-full text-[clamp(18px,1.1vw,20px)] font-light text-center md:text-left'
 			}>
 			{content}
 		</div>
@@ -43,7 +37,7 @@ export default function About() {
 		<section
 			className="w-full mx-auto mt-responsive-container"
 			aria-labelledby="about-heading">
-			<div className="relative flex items-center justify-center">
+			<div className="relative flex items-center justify-center mb-16">
 				<Heading
 					headingTop="Me"
 					headingMiddle="About Keanin"
@@ -56,65 +50,28 @@ export default function About() {
 			</div>
 
 			<AboutSection
-				title="From Curiosity to Craft..."
 				content={
 					<p>
-						In{' '}
-						<span className="underline underline-offset-2">
-							2020
-						</span>
-						, I embarked on my journey into web development, sparked
-						by curiosity and a desire to create. What began with a
-						simple HTML/CSS tutorial quickly evolved into{' '}
-						<span className="underline underline-offset-2">
-							an all-consuming passion
-						</span>
-						. The ability to transform lines of code into visually
-						stunning, interactive experiences captivated me
-						completely. <br /> <br />I found my true calling in frontend
-						development, where I could blend analytical
-						problem-solving with creative design, turning complex
-						ideas into elegant, user-friendly interfaces that make a
-						real impact.
+						In 2020, my curiosity led me to web development, starting with a basic HTML/CSS tutorial. What began as an interest soon became a passion, as I discovered the joy of turning code into interactive, visually engaging creations.<br /><br />
 					</p>
 				}
 			/>
 
 			<AboutSection
-				title="Origins & Inspiration..."
 				content={
 					<>
 						<p>
-							From my earliest memories, I've been captivated by
-							the intersection of{' '}
-							<span className="underline underline-offset-2">
-								art and technology
-							</span>
-							. My journey began with traditional creative
-							pursuits—sketching, digital art, and design—while
-							simultaneously exploring the ever-evolving world of
-							technology. Growing up during the digital
-							revolution, I witnessed firsthand the transformation
-							from basic devices to today's sophisticated devices,
-							sparking a deep appreciation for how technology can
-							enhance and transform human experiences.
+						From a young age, I’ve been fascinated by the fusion of art and technology. My journey began with traditional creative outlets like sketching, digital art, and design, alongside an exploration of the rapidly advancing tech world. Growing up during the digital revolution, I watched basic tools evolve into sophisticated devices, deepening my appreciation for how technology enhances and reshapes human experiences.
 						</p>
 						<br />
 						<p>
-							This curiosity led me to experiment with web
-							development, teaching me valuable lessons about web
-							design, user experience, and the importance of
-							community-driven development. These early
-							experiences with customization and optimization laid
-							the foundation for my current passion in creating
-							intuitive, performance-focused web applications.
+						This curiosity drove me to explore web development, where I learned key principles of web design, user experience, and the value of community-driven innovation. These early experiments in customization and optimization shaped my passion for building intuitive, performance-driven web applications.
 						</p>
 					</>
 				}
-				isReversed
 			/>
 
-			<div className="text-center p-8 mt-12">
+			<div className="text-center md:text-left pt-4 pb-8 mt-12">
 				<Button
 					asChild
 					variant="defaultGradient"

@@ -20,7 +20,7 @@ export default function Home() {
 
 			{/* Wrap lazy-loaded components in Suspense */}
 			<Suspense fallback={<Loading />}>
-				<section className="space-y-32">
+				<section className="space-y-16">
 					<Featured />
 					<About />
 					<Skills buttonDisplay={true} />

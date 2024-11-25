@@ -33,7 +33,7 @@ function ScribbleLine4() {
 		<img
 			src={src}
 			alt="scribble shapes"
-			className="absolute -bottom-[12px] items-center w-full max-w-[350px] h-[40px] invert opacity-50"
+			className="absolute -bottom-[12px] md:-left-6 mx-auto md:mx-0 items-center w-full max-w-[200px] h-6 invert opacity-50"
 		/>
 	);
 }
@@ -99,10 +99,9 @@ export default function Contact() {
 	});
 
 	return (
-		<section className="w-full mx-auto mt-responsive-container">
+		<section className="w-full mt-responsive-container">
 			<div className="relative flex items-center justify-center">
 				<Heading
-					headingTop="Contact Me"
 					headingMiddle="Get In Touch"
 					headingShortDesc="Send me a message."
 				/>
@@ -115,7 +114,7 @@ export default function Contact() {
 			<form 
 				ref={formRef}
 				onSubmit={formik.handleSubmit} 
-				className="w-full max-w-md mx-auto grid mt-20"
+				className="w-full grid mt-20"
 			>
 				<div className="grid w-full items-center gap-1.5">
 					<Label htmlFor="name">Name</Label>
