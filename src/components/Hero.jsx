@@ -72,7 +72,7 @@ export default function Hero() {
 				</h2> */}
 
 				<h3 className="relative flex items-center justify-center text-[clamp(16px,1vw,20px)] text-muted-foreground mb-6">
-					<span className="relative z-10"> <span className='w-2 h-2 bg-blue-500'></span>Cape Town, South Africa</span>
+					<span className="relative z-10 flex items-center justify-center gap-2 mb-1"> <p className='w-1 h-1 rounded-full bg-blue-500'></p>Cape Town, South Africa</span>
 					<Suspense fallback={<LoadingSpinner />}>
 						<ScribbleLine />
 					</Suspense>
@@ -88,8 +88,7 @@ export default function Hero() {
 						words={technologies}
 					/>
 					<br />
-					Passionate about using modern web tech to build efficient,
-					scalable apps solving real problems.
+					Leveraging modern web technologies to create efficient, scalable applications that address real-world challenges.
 				</p>
 
 				<Button asChild variant="defaultGradient" size="md">

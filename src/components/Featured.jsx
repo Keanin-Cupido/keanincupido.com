@@ -7,6 +7,7 @@ import { Separator } from './ui/separator';
 import Heading from './Heading';
 import { projects } from '@/lib/data/data';
 import LoadingSpinner from '@/components/ui/loading';
+import { ArrowRight } from 'lucide-react';
 
 const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 	const { src, isLoading } = useImage({
@@ -105,14 +106,14 @@ export default function Featured() {
 			</section>
 
 			<div className="text-center md:text-left">
-				<Button 
-					asChild 
-					variant="defaultGradient" 
-					size="lg"
-					className="font-medium"
+				<Link 
+					to="/portfolio" 
+					className='font-medium transition-all duration-300 underline underline-offset-8 group'
+					aria-label="View all projects"
 				>
-					<Link to="/portfolio">View All Projects</Link>
-				</Button>
+					View All Projects 
+					<ArrowRight className="inline ml-2 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+				</Link>
 			</div>
 		</section>
 	);

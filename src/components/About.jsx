@@ -2,6 +2,8 @@ import { Suspense } from 'react';
 import { useImage } from 'react-image';
 import { Button } from './ui/button';
 import Heading from './Heading';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const ScribbleLine = () => {
 	const { src } = useImage({
@@ -72,13 +74,14 @@ export default function About() {
 			/>
 
 			<div className="text-center md:text-left pt-4 pb-8 mt-12">
-				<Button
-					asChild
-					variant="defaultGradient"
-					size="md"
-					aria-label="Read more about me">
-					<a href="/about">Read More</a>
-				</Button>
+				<Link 
+					to="/about" 
+					className='font-medium transition-all duration-300 underline underline-offset-8 group'
+					aria-label="Read More"
+				>
+					Read More 
+					<ArrowRight className="inline ml-2 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+				</Link>
 			</div>
 		</section>
 	);

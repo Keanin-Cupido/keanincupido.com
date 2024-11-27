@@ -68,12 +68,12 @@ const Footer = memo(function Footer() {
 				</nav>
 			</div>
 
-			<button
+			{/* <button
 				onClick={scrollToTop}
 				className="absolute animate-bounce duration-1000 hover:duration-300 text-[clamp(14px,1vw,16px)] hover:underline underline-offset-4 bottom-8 right-8 text-white/75 rounded-full hover:opacity-50 transition focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent p-2"
 				aria-label="Back to top">
 				↑ Back to top
-			</button>
+			</button> */}
 		</footer>
 	);
 });

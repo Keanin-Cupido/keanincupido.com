@@ -2,6 +2,8 @@ import { Suspense } from 'react';
 import { useImage } from 'react-image';
 import { Button } from './ui/button';
 import Heading from './Heading';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const SKILLS_DATA = [
 	{
@@ -222,7 +224,7 @@ export default function Skills({ buttonDisplay = false }) {
 			</div>
 
 			<div
-				className="w-full text-left flex items-start justify-start gap-8 mt-24"
+				className="w-full text-center md:text-left flex items-start justify-center md:justify-start gap-8 mt-24"
 				role="list">
 				<Suspense
 					fallback={[...Array(6)].map((_, i) => (
@@ -237,7 +239,7 @@ export default function Skills({ buttonDisplay = false }) {
 			{/* Extra Skills */}
 			{window.location.pathname === '/about' ? (
 			<div
-				className="w-full max-w-[75%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mt-12"
+				className="w-full max-w-[75%] mx-auto md:mx-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mt-12"
 				role="list">
 				<Suspense
 					fallback={[...Array(6)].map((_, i) => (
@@ -252,7 +254,7 @@ export default function Skills({ buttonDisplay = false }) {
 				</Suspense>
 			</div>) : null}
 
-			<p className="w-full text-left text-sm md:text-base mt-16">
+			<p className="w-full text-center md:text-left text-sm md:text-base mt-16">
 				While my toolkit spans numerous technologies,{' '}
 				<span className="underline underline-offset-4">
 					React and its powerful ecosystem
@@ -269,9 +271,14 @@ export default function Skills({ buttonDisplay = false }) {
 
 			{buttonDisplay && (
 				<div className="pt-4 pb-8 mt-12 text-center md:text-left">
-					<Button asChild variant="defaultGradient" size="md">
-						<a href="/about">Read More</a>
-					</Button>
+					<Link 
+						to="/about" 
+						className='font-medium transition-all duration-300 underline underline-offset-8 group'
+						aria-label="Read More"
+					>
+						Read More 
+						<ArrowRight className="inline ml-2 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+					</Link>
 				</div>
 			)}
 		</section>
