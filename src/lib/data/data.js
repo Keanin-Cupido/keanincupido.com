@@ -62,6 +62,17 @@ export const projects = [
 		category: 'nextjs',
 		projectInfo: '/portfolio/melodyfetch',
 	},
+	{
+		title: 'SpendWise',
+		description:
+			'A web app for tracking and categorizing expenses, visualizing spending patterns with interactive charts, setting budgets, and exporting data, built with a modern tech stack.',
+		image: '/projects_imgs/spendwise.webp',
+		technologies: ['React', 'TailwindCSS', 'Framer Motion', 'Vercel'],
+		demoUrl: 'https://spendwisetrack.vercel.app/',
+		sourceUrl: 'https://github.com/Keanin-Cupido/react-spend-wise',
+		category: 'react',
+		projectInfo: '/portfolio/spendwise',
+	},
 ];
 
 export const blogPosts = [
