@@ -270,7 +270,7 @@ export default function Skills({ buttonDisplay = false }) {
 			</p>
 
 			{buttonDisplay && (
-				<div className="pt-4 pb-8 mt-12 text-center md:text-left">
+				<div className="py-4 mt-4 text-center md:text-left">
 					<Link 
 						to="/about" 
 						className='font-medium transition-all duration-300 underline underline-offset-8 group'

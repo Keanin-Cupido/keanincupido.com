@@ -73,7 +73,7 @@ export default function About() {
 				}
 			/>
 
-			<div className="text-center md:text-left pt-4 pb-8 mt-12">
+			<div className="text-center md:text-left py-4 mt-4">
 				<Link 
 					to="/about" 
 					className='font-medium transition-all duration-300 underline underline-offset-8 group'

@@ -8,6 +8,7 @@ import Heading from './Heading';
 import { projects } from '@/lib/data/data';
 import LoadingSpinner from '@/components/ui/loading';
 import { ArrowRight } from 'lucide-react';
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 const FeaturedProject = ({ img, title, subtitle, tech, link }) => {
 	const { src, isLoading } = useImage({
@@ -63,7 +64,7 @@ export default function Featured() {
 
 	return (
 		<section 
-			className="container mx-auto py-16 space-y-16"
+			className="container mx-auto py-8 space-y-16"
 			aria-labelledby="featured-heading"
 			id="featured"
 		>
@@ -93,28 +94,29 @@ export default function Featured() {
 
 				<div className="grid grid-cols-1 gap-8">
 					{otherProjects.map((project) => (
-						<ProjectCard
-							key={project.title}
-							{...project}
-							link={project.projectInfo}
-							image={project.image}
-							subtext={project.description}
-							techUsedIcons={project.technologies}
-						/>
+						<AnimatedSection key={project.title} animation="fade-left">
+							<ProjectCard
+								{...project}
+								link={project.projectInfo}
+								image={project.image}
+								subtext={project.description}
+								techUsedIcons={project.technologies}
+							/>
+						</AnimatedSection>
 					))}
 				</div>
-			</section>
 
-			<div className="text-center md:text-left">
-				<Link 
-					to="/portfolio" 
-					className='font-medium transition-all duration-300 underline underline-offset-8 group'
-					aria-label="View all projects"
-				>
-					View All Projects 
-					<ArrowRight className="inline ml-2 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-				</Link>
-			</div>
+				<div className="text-center md:text-left">
+					<Link 
+						to="/portfolio" 
+						className='font-medium transition-all duration-300 underline underline-offset-8 group'
+						aria-label="View all projects"
+					>
+						View All Projects 
+						<ArrowRight className="inline ml-2 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+					</Link>
+				</div>
+			</section>
 		</section>
 	);
 }

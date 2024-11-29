@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import Hero from '@/components/Hero';
 import Loading from '@/components/ui/loading';
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 // Lazy load components for better initial page load
 const Featured = lazy(() => import('@/components/Featured'));
@@ -20,11 +21,20 @@ export default function Home() {
 
 			{/* Wrap lazy-loaded components in Suspense */}
 			<Suspense fallback={<Loading />}>
-				<section className="space-y-16">
+				<section className="space-y-8">
 					<Featured />
-					<About />
-					<Skills buttonDisplay={true} />
-					<Contact />
+					
+					<AnimatedSection animation="fade-up">
+						<About />
+					</AnimatedSection>
+					
+					<AnimatedSection animation="fade-up">
+						<Skills buttonDisplay={true} />
+					</AnimatedSection>
+					
+					<AnimatedSection animation="fade-up">
+						<Contact />
+					</AnimatedSection>
 				</section>
 			</Suspense>
 		</main>

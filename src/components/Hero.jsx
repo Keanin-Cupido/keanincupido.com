@@ -17,6 +17,8 @@ const HeroImage = () => {
 			src={src}
 			alt="Decorative background shapes"
 			className="-z-10 absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl"
+			loading="lazy"
+			decoding="async"
 			aria-hidden="true"
 		/>
 	);
@@ -33,6 +35,8 @@ const ScribbleLine = () => {
 			src={src}
 			alt=""
 			className="absolute -bottom-[6px] w-[200px] h-[10px] invert opacity-30"
+			loading="lazy"
+			decoding="async"
 			aria-hidden="true"
 		/>
 	);
@@ -43,7 +47,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="relative flex min-h-[calc(60vh)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/5 to-blue-900/0 rounded-2xl"
+			className="relative flex min-h-[calc(45vh)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/5 to-blue-900/0 rounded-2xl"
 			aria-labelledby="hero-heading">
 			<Suspense fallback={<LoadingSpinner />}>
 				<HeroImage />
@@ -56,6 +60,8 @@ export default function Hero() {
 					className="w-16 h-16 mb-4 rounded-lg"
 					width="64"
 					height="64"
+					loading="lazy"
+					decoding="async"
 				/>
 
 				<h1
