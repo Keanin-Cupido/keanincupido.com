@@ -29,7 +29,7 @@ export default function Header() {
 			<div className="container mx-auto px-8 flex justify-between items-center space-x-2">
 				<NavLink
 					to={'/'}
-					className="flex items-center justify-start gap-4 hover:opacity-80"
+					className="flex items-center justify-start gap-2 hover:opacity-80"
 					aria-label="Navigate to home page">
 					<img
 						src="/keanincupido.svg"
@@ -38,9 +38,9 @@ export default function Header() {
 						aria-label="Keanin Cupido's profile picture"
 					/>
 					<h1
-						className="font-black text-base text-white/90"
+						className="font-black text-sm text-blue-300"
 						aria-label="User's name">
-						{/* {personalInfo.name} */}KC.
+						{/* {personalInfo.name} */}keanincupido
 					</h1>
 				</NavLink>
 				<nav className="hidden md:block" aria-label="Main navigation">

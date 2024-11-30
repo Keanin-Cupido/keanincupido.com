@@ -4,14 +4,28 @@ import PageHero from '@/components/PageHero';
 import { projects } from '@/lib/data/data';
 import { AnimatedSection } from '@/components/ui/animated-section';
 
+// Skeleton component for the project image
+const ImageSkeleton = () => (
+  <div className="relative mx-auto w-1/2 aspect-video animate-pulse">
+    <div className="absolute inset-0 bg-gradient-to-r from-zinc-700/50 via-zinc-600/50 to-zinc-700/50 rounded-lg" />
+  </div>
+);
+
 export default function ProjectInfo() {
 	const [projectData, setProjectData] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
+	const [imageLoaded, setImageLoaded] = useState(false);
 	const location = useLocation();
+
+	// Scroll to top when component mounts or location changes
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'instant' });
+	}, [location.pathname]);
 
 	useEffect(() => {
 		const fetchProject = () => {
 			setIsLoading(true);
+			setImageLoaded(false);
 			const project = projects.find(
 				(p) => p.projectInfo === location.pathname,
 			);
@@ -44,7 +58,7 @@ export default function ProjectInfo() {
 	}
 
 	return (
-		<main className="container mx-auto px-4 py-8">
+		<main className="container mx-auto px-4 py-2">
 			<AnimatedSection animation="fade-up">
 				<PageHero
 					pageName={projectData.title}
@@ -71,11 +85,15 @@ export default function ProjectInfo() {
 			<section className="space-y-8">
 				<AnimatedSection animation="fade-up">
 					<div className="relative mx-auto w-1/2 aspect-video">
+						{!imageLoaded && <ImageSkeleton />}
 						<img
 							src={projectData.image}
 							alt={`Screenshot of ${projectData.title}`}
-							className="rounded-lg shadow-lg object-cover"
+							className={`rounded-lg shadow-lg object-cover transition-opacity duration-300 ${
+								imageLoaded ? 'opacity-100' : 'opacity-0'
+							}`}
 							loading="lazy"
+							onLoad={() => setImageLoaded(true)}
 						/>
 					</div>
 				</AnimatedSection>

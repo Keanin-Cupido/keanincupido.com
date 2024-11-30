@@ -47,7 +47,7 @@ const Footer = memo(function Footer() {
 
 	return (
 		<footer
-			className="relative min-h-[calc(30vh)] bg-gradient-to-b from-blue-900/10 to-blue-600/5 flex flex-col items-center justify-center gap-4 mx-4 mt-28 mb-12 py-12 rounded-2xl"
+			className="relative min-h-[calc(30vh)] border border-blue-600/40 bg-gradient-to-b from-blue-900/10 to-blue-600/5 flex flex-col items-center justify-center gap-4 mx-4 mt-28 mb-12 py-12 rounded-2xl"
 			aria-label="Footer">
 			<LogoImage size="md" />
 			<Suspense fallback={null}>

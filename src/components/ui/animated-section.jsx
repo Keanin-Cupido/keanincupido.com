@@ -19,7 +19,7 @@ export function AnimatedSection({
     <div
       ref={targetRef}
       className={cn(
-        'transition-all duration-1000 ease-out',
+        'transition-all duration-900 ease-in-out',
         isIntersecting ? '' : animations[animation],
         className
       )}

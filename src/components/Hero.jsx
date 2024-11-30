@@ -47,7 +47,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="relative flex min-h-[calc(45vh)] flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/5 to-blue-900/0 rounded-2xl"
+			className="relative flex min-h-[calc(45vh)] border border-blue-600/40 flex-col items-center justify-center py-20 mt-2 mb-4 bg-gradient-to-b from-blue-600/5 to-blue-900/0 rounded-2xl"
 			aria-labelledby="hero-heading">
 			<Suspense fallback={<LoadingSpinner />}>
 				<HeroImage />
@@ -97,7 +97,7 @@ export default function Hero() {
 					Leveraging modern web technologies to create efficient, scalable applications that address real-world challenges.
 				</p>
 
-				<Button asChild variant="defaultGradient" size="md">
+				<Button asChild variant="defaultGradient" size="default">
 					<a href="/contact">Contact</a>
 				</Button>
 			</div>

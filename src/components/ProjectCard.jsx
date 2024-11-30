@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = ({
+const ProjectCard = memo(({
 	link,
 	image,
 	title,
@@ -12,16 +12,19 @@ const ProjectCard = ({
 	liveLink,
 	githubLink,
 }) => {
-	const trimmedSubText =
-		subtext?.slice(0, 100) + (subtext?.length > 100 ? '...' : '');
+	// Memoize the trimmed text
+	const trimmedSubText = React.useMemo(() => 
+		subtext?.slice(0, 100) + (subtext?.length > 100 ? '...' : ''),
+		[subtext]
+	);
 
 	return (
 		<article
 			className="group relative w-full min-h-[min(250px,350px)] px-4 pt-8 pb-4 lg:p-6 
 				bg-black/10 rounded-xl flex flex-col lg:flex-row 
 				items-start gap-6 overflow-hidden border border-gray-800/50
-				transition-all duration-300 hover:border-gray-700/70
-				backdrop-blur-sm hover:backdrop-blur-md"
+				transition-colors duration-200 hover:border-gray-700/70
+				backdrop-blur-sm will-change-transform"
 			role="article"
 			aria-label={`Project: ${title}`}>
 			{/* Content Section */}
@@ -37,13 +40,9 @@ const ProjectCard = ({
 					to={link}
 					className="group/title w-full text-2xl md:text-xl 
 						font-bold tracking-tight lg:pt-4 text-center lg:text-left 
-						text-gray-100 transition-colors"
+						text-gray-100 hover:text-gray-400 transition-colors"
 					aria-label={`View ${title} project details`}>
-					<span
-						className="bg-gradient-to-r from-gray-100 to-gray-100 
-						bg-[length:0px_2px] bg-left-bottom bg-no-repeat 
-						transition-[background-size] duration-300 
-						group-hover/title:bg-[length:100%_2px]">
+					<span>
 						{title}
 					</span>
 				</Link>
@@ -55,9 +54,9 @@ const ProjectCard = ({
 				</p>
 
 				<div className="flex flex-wrap items-center justify-start mx-auto md:mx-0 gap-2">
-					{techUsedIcons.map((icon, index) => (
+					{techUsedIcons.slice(0, 4).map((icon, index) => (
 						<Badge
-							key={index}
+							key={icon + index}
 							variant="secondary"
 							className="bg-gray-800/70 text-gray-100 px-3 py-1 
 								text-xs font-medium transition-colors hover:bg-gray-700/70">
@@ -72,14 +71,11 @@ const ProjectCard = ({
 							href={liveLink}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="group/link flex items-center gap-2 text-gray-100 
-								font-semibold transition-colors hover:text-gray-300"
+							className="flex items-center gap-2 text-gray-100 
+								font-semibold hover:text-gray-300 transition-colors"
 							aria-label={`View live demo of ${title}`}>
 							Live Demo
-							<ArrowUpRight
-								className="w-5 h-5 transition-transform 
-								group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
-							/>
+							<ArrowUpRight className="w-5 h-5" />
 						</a>
 					)}
 					{githubLink && (
@@ -87,14 +83,11 @@ const ProjectCard = ({
 							href={githubLink}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="group/link flex items-center gap-2 text-gray-100 
-								font-semibold transition-colors hover:text-gray-300"
+							className="flex items-center gap-2 text-gray-100 
+								font-semibold hover:text-gray-300 transition-colors"
 							aria-label={`View ${title} source code on GitHub`}>
 							GitHub
-							<ArrowUpRight
-								className="w-5 h-5 transition-transform 
-								group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
-							/>
+							<ArrowUpRight className="w-5 h-5" />
 						</a>
 					)}
 				</div>
@@ -104,19 +97,22 @@ const ProjectCard = ({
 			<Link
 				to={link}
 				className="w-full h-full max-h-[200px] lg:w-1/2 aspect-video lg:aspect-square 
-					overflow-hidden rounded-lg transition-transform duration-500 
-					group-hover:scale-[1.02]"
+					overflow-hidden rounded-lg transition-transform duration-200 
+					hover:scale-[1.01]"
 				aria-label={`View ${title} project screenshot`}>
 				<img
 					src={image}
 					alt={`Screenshot of ${title} project`}
 					className="w-full object-cover object-left 
-						transition-transform duration-500 group-hover:scale-105"
+						transition-transform duration-200 hover:scale-[1.01]"
 					loading="lazy"
+					decoding="async"
 				/>
 			</Link>
 		</article>
 	);
-};
+});
+
+ProjectCard.displayName = 'ProjectCard';
 
 export default ProjectCard;
